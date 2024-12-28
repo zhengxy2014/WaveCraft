@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaveCraft - 生成并播放音乐波形的C语言工具</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1, h2 { color: #2c3e50; }
+p, ul, ol { line-height: 1.6; }
+code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+pre code { display: block; padding: 10px; white-space: pre-wrap; }
+.container { max-width: 800px; margin: auto; }
+button { padding: 10px 20px; background-color: #3498db; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #2980b9; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>WaveCraft</h1>
+    <p>一个用于生成音乐波形并支持实时播放的C语言工具。</p>
+  </header>
+
+  <section>
+    <h2>简介</h2>
+    <p>WaveCraft 是一个旨在生成音乐波形的项目，它可以基于指定的音符序列生成 WAV 或 MP3 格式的音频文件，并且支持使用 ALSA 库进行实时播放。</p>
+  </section>
+
+  <section>
+    <h2>安装</h2>
+    <h3>前提条件</h3>
+    <p>确保你已经安装了以下库：</p>
+    <ul>
+      <li><code>libsndfile</code>: 用于处理音频文件。</li>
+      <li><code>lame</code>: 用于 MP3 编码。</li>
+      <li><code>alsa-lib</code>: 用于音频播放（Linux）。</li>
+      <li><code>Math Library</code>: 标准 C 数学库。</li>
+    </ul>
+    <p>在 Debian/Ubuntu 上，你可以使用以下命令安装这些依赖项：</p>
+    <pre><code>sudo apt-get update
+sudo apt-get install libsndfile1-dev libmp3lame-dev libasound2-dev</code></pre>
+  </section>
+
+  <section>
+    <h2>构建</h2>
+    <p>使用 Makefile 构建项目：</p>
+    <pre><code>make</code></pre>
+    <p>这将编译源代码并在 <code>bin/</code> 目录下生成一个名为 <code>wavecraft</code> 的可执行文件。</p>
+  </section>
+
+  <section>
+    <h2>使用</h2>
+    <h3>运行程序</h3>
+    <p>要运行 WaveCraft，请使用以下命令：</p>
+    <pre><code>./bin/wavecraft</code></pre>
+    <h3>命令行参数</h3>
+    <p>尝试运行 <code>./bin/wavecraft --help</code> 来查看可用的命令行选项。</p>
+  </section>
+
+  <section>
+    <h2>贡献</h2>
+    <p>欢迎贡献！请遵循以下步骤：</p>
+    <ol>
+      <li>Fork 本仓库。</li>
+      <li>创建一个新的分支（<code>git checkout -b feature/new-feature</code>）。</li>
+      <li>提交你的更改（<code>git commit -m 'Add some feature'</code>）。</li>
+      <li>推送到新分支（<code>git push origin feature/new-feature</code>）。</li>
+      <li>提交 Pull Request。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>许可证</h2>
+    <p>本项目采用 MIT 许可证。详情请参阅 <a href="LICENSE">LICENSE</a> 文件。</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 WaveCraft. 所有权利保留.</p>
+  </footer>
+</div>
+</body>
+</html>
